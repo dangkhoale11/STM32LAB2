@@ -531,3 +531,39 @@
 2024-09-26 21:56:29,934 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 2284mS.
 2024-09-26 21:56:29,935 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 1mS.
 2024-09-26 21:56:29,936 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2024-09-26 22:01:36,612 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x186,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-09-26 22:02:07,782 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 871625680 Bytes (1073741824)
+2024-09-26 22:02:08,760 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 902570512 Bytes (1073741824)
+2024-09-26 22:02:09,799 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 945838088 Bytes (1073741824)
+2024-09-26 22:02:09,986 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2024-09-26 22:02:09,986 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2024-09-26 22:02:09,986 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2024-09-26 22:02:09,986 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2024-09-26 22:02:09,986 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2024-09-26 22:02:09,987 [INFO] CodeGenerator:663 - code generatio: config db path: C:\ST\STM32CubeIDE_1.7.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.3.0.202107141111\\db\
+2024-09-26 22:02:10,205 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\MXTmpFiles\license.tmp_save
+2024-09-26 22:02:10,255 [INFO] CodeEngine:257 - Generated code: C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\MXTmpFiles\license.tmp
+2024-09-26 22:02:10,262 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\MXTmpFiles\gpio.tmp_save
+2024-09-26 22:02:10,311 [INFO] CodeEngine:257 - Generated code: C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\MXTmpFiles\gpio.tmp
+2024-09-26 22:02:10,444 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Src\stm32f1xx_it.c_save
+2024-09-26 22:02:10,518 [INFO] CodeEngine:257 - Generated code: C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Src\stm32f1xx_it.c
+2024-09-26 22:02:10,521 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Inc\stm32f1xx_it.h_save
+2024-09-26 22:02:10,576 [INFO] CodeEngine:257 - Generated code: C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Inc\stm32f1xx_it.h
+2024-09-26 22:02:10,588 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Src\stm32f1xx_hal_msp.c_save
+2024-09-26 22:02:10,682 [INFO] CodeEngine:257 - Generated code: C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Src\stm32f1xx_hal_msp.c
+2024-09-26 22:02:10,685 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\MXTmpFiles\system.tmp_save
+2024-09-26 22:02:10,720 [INFO] CodeEngine:257 - Generated code: C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\MXTmpFiles\system.tmp
+2024-09-26 22:02:10,730 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Inc\stm32f1xx_hal_conf.h_save
+2024-09-26 22:02:10,797 [INFO] CodeEngine:257 - Generated code: C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Inc\stm32f1xx_hal_conf.h
+2024-09-26 22:02:10,808 [WARN] IPConfigManager:3148 - IP not found : TIM
+2024-09-26 22:02:10,809 [WARN] CodeGenerator:3268 - IP not found : null
+2024-09-26 22:02:10,817 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Inc\main.h_save
+2024-09-26 22:02:10,881 [INFO] CodeEngine:257 - Generated code: C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Inc\main.h
+2024-09-26 22:02:10,894 [INFO] CodeEngine:239 - oldGeneratedFile, C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Src\main.c_save
+2024-09-26 22:02:10,995 [INFO] CodeEngine:257 - Generated code: C:\Users\ADMIN\Desktop\GIT_LAB2\LAB2\Core\Src\main.c
+2024-09-26 22:02:11,932 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 61mS.
+2024-09-26 22:02:11,936 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2024-09-26 22:02:12,253 [INFO] ConfigFileManager:1271 - The Die is : DIE412
+2024-09-26 22:02:13,611 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1675mS.
+2024-09-26 22:02:13,611 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2024-09-26 22:02:13,614 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
