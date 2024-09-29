@@ -129,11 +129,11 @@ int main(void)
   while (1)
   {
 	  if(timer1_flag == 1){
-	  	set_Timer1(100);
+	  	set_Timer(0, 100);
 	  	HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 	  }
 	  if(timer2_flag == 1){
-	  	set_Timer2(50);
+	  	set_Timer(1, 50);
 	  	update7SEG(index_led++);
 	  	if(index_led >= MAX_LED) index_led = 0;
 	  }
