@@ -62,18 +62,6 @@ static void MX_TIM2_Init(void);
 // clock buffer function
 int hour = 15, minute = 8, second = 50;
 void updateClockBuffer(){
-	second++;
-	if(second >= 60){
-		second = 0;
-		minute++;
-	}
-	if(minute >= 60) {
-		minute = 0;
-		hour++;
-	}
-	if(hour >= 24){
-		hour = 0;
-	}
 	led_buffer[0] = hour / 10;
 	led_buffer[1] = hour % 10;
 	led_buffer[2] = minute / 10;
@@ -85,11 +73,8 @@ const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
 uint8_t matrix_buffer[8] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08};
 
-uint8_t row_buffer[8] = {0x18, 0x24, 0x3E,  0x24,
-	    0x24,
-	    0x24,
-	    0x00  };
-uint8_t col_buffer[8] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80};
+uint8_t col_buffer[8] = {0x18, 0x3C, 0x66, 0x66, 0x7E, 0x7E, 0x66, 0x66};
+uint8_t row_buffer[8] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80};
 
 void displayCol (int index)
 {
@@ -197,30 +182,44 @@ int main(void)
   setTimer(0, 100);
   setTimer(1, 25);
   setTimer(2, 100);
-  setTimer(3,25);
+  setTimer(3,100);
   updateClockBuffer();
   while (1)
   {
+
 	  if(timer_flag[0] == 1){
-	  		  setTimer(0, 100);
-	  		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-	  //		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-	  	  }
-	  	  if(timer_flag[1] == 1){
-	  		  setTimer(1, 25);
-	  		  update7SEG(index_led);
-	  		  if(index_led >= MAX_LED-1) index_led = 0;
-	  		  else index_led++;
-	  	  }
-	  	  if(timer_flag[2] == 1){
-	  		  setTimer(2, 100);
-	  		  updateClockBuffer();
-	  	  }
-	  	  if(timer_flag[3] == 1){
-	  		  setTimer(3,25);
-	  		  updateLEDMatrix(index_led_matrix++);
-	  		  if(index_led_matrix >= MAX_LED_MATRIX-1) index_led_matrix = 1;
-	  	  }
+	     setTimer(0, 100);
+	  	 HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+	  }
+	  if(timer_flag[1] == 1){
+
+	  	 setTimer(1, 25);
+	  	 update7SEG(index_led);
+	  	 if(index_led >= MAX_LED-1) index_led = 0;
+	  	 else index_led++;
+	  }
+	  if(timer_flag[2] == 1){
+	  	 setTimer(2, 100);
+	  	 second++;
+	  	 if(second >= 60){
+	  	     second = 0;
+	  		 minute++;
+	  	}
+	  	if(minute >= 60) {
+	  		 minute = 0;
+	  		 hour++;
+	  	}
+	  	if(hour >= 24){
+	  		 hour = 0;
+	  	}
+	  	updateClockBuffer();
+	  }
+	  if(timer_flag[3] == 1){
+		  setTimer(3,100);
+		  updateLEDMatrix(index_led_matrix++);
+		  if(index_led_matrix >= MAX_LED_MATRIX-1) index_led_matrix = 1;
+
+	  }
 
     /* USER CODE END WHILE */
 
