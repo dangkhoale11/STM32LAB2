@@ -1455,3 +1455,7 @@
 2024-09-29 09:27:05,811 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
 2024-09-29 09:27:50,932 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://sw-center.st.com:443: The target server failed to respond
 2024-09-29 09:27:50,934 [INFO] RetryExec:113 - Retrying request to {s}->https://sw-center.st.com:443
+2024-09-29 13:56:31,979 [INFO] Activator:177 - 
+
+
+2024-09-29 13:56:31,979 [INFO] Activator:178 - !SESSION log4j initialized
