@@ -134,7 +134,7 @@ int main(void)
   setTimer(0, 2);
   setTimer(1, 3);
   setTimer(2, 5);
-  updateClockBuffer();
+
   while (1)
   {
 
@@ -144,7 +144,7 @@ int main(void)
 	  }
 	  if(timer_flag[1] == 1){
 
-	  	 setTimer(1, 25);
+	  	 setTimer(1, 100);
 	  	 update7SEG(index_led);
 	  	 if(index_led >= MAX_LED-1) index_led = 0;
 	  	 else index_led++;

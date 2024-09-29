@@ -134,7 +134,7 @@ int main(void)
   setTimer(0, 2);
   setTimer(1, 3);
   setTimer(2, 5);
-  updateClockBuffer();
+
   while (1)
   {
 

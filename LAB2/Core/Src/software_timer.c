@@ -5,29 +5,25 @@
  *      Author: ADMIN
  */
 #include "software_timer.h"
+#include "main.h"
 
 
-int timer_Counter1 = 0;
-int timer1_flag = 0;
-int timer_Counter2 = 0;
-int timer2_flag = 0;
+int timer_counter[10] = {0};
+int timer_flag[10] = {0};
 
-void set_Timer1(int duration){
-	timer_Counter1 = duration;
-	timer1_flag = 0;
+void setTimer(int i, int duration){
+	timer_flag[i] = 0;
+	timer_counter[i] = duration;
 }
-
-void set_Timer2(int duration){
-	timer_Counter2 = duration;
-	timer2_flag = 0;
+void timer_run(int i){
+	if(timer_counter[i] > 0){
+		timer_counter[i]--;
+		if(timer_counter[i] <= 0) timer_flag[i] = 1;
+	}
 }
-void timer_Run(){
-	if(timer_Counter1 > 0){
-		timer_Counter1--;
-		if(timer_Counter1 <= 0) timer1_flag = 1;
-	}
-	if(timer_Counter2 > 0){
-			timer_Counter2--;
-			if(timer_Counter2 <= 0) timer2_flag = 1;
-	}
+void timerRun(){
+	timer_run(0);
+	timer_run(1);
+	timer_run(2);
+	timer_run(3);
 }
