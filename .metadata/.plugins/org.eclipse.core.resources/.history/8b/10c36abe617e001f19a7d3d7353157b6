@@ -23,7 +23,7 @@ GPIO_PinState LEDS_state[10][7] = { { 0, 0, 0, 0, 0, 0, 1 }, { 1, 0, 0, 1,
 
 
 
- int MAX_LED = 4;
+ const int MAX_LED = 4;
  int index_led = 0;
  int led_buffer[4] = {1,2,3,4};
   void set_LEDS(GPIO_PinState *L_LEDS_state) {

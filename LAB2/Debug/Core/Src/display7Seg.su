@@ -1,3 +1,4 @@
-display7Seg.c:23:8:set_LEDS	24	static
-display7Seg.c:28:8:display7SEG	16	static
-display7Seg.c:67:8:turnOn	16	static
+display7Seg.c:29:8:set_LEDS	24	static
+display7Seg.c:34:8:display7SEG	16	static
+display7Seg.c:73:8:turnOn	16	static
+display7Seg.c:105:7:update7SEG	16	static

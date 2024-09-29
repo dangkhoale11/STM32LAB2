@@ -58,7 +58,31 @@ static void MX_TIM2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-
+const int MAX_LED = 4;
+int index_led = 0;
+int led_buffer[4] = {1,2,3,4};
+void update7SEG(int index){
+	switch (index){
+	case 0:
+		turnOn(index);
+		display7SEG(led_buffer[index]);
+		break;
+	case 1:
+		turnOn(index);
+		display7SEG(led_buffer[index]);
+		break;
+	case 2:
+		turnOn(index);
+		display7SEG(led_buffer[index]);
+		break;
+	case 3:
+		turnOn(index);
+		display7SEG(led_buffer[index]);
+		break;
+	default:
+		break;
+	}
+}
 
 // clock buffer function
 int hour = 15, minute = 8, second = 50;

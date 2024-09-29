@@ -16,7 +16,7 @@ extern uint16_t SEG_PINS[12];
 
 extern int index_led;
 extern int led_buffer[4];
-extern int MAX_LED;
+extern const int MAX_LED;
 
 
 void update7SEG(int index);

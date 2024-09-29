@@ -11,8 +11,6 @@ extern int timer1_flag;
 
 extern int timer_flag[10];
 
-
-
 void setTimer(int i, int duration);
 void timer_run(int i);
 void timerRun();
