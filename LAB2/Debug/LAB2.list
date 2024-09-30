@@ -37,13 +37,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  000166da  00000000  00000000  0002b818  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000a2ac  00000000  00000000  00041ef2  2**0
+ 17 .debug_line   0000a2aa  00000000  00000000  00041ef2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00082385  00000000  00000000  0004c19e  2**0
+ 18 .debug_str    00082385  00000000  00000000  0004c19c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000ce523  2**0
+ 19 .comment      00000053  00000000  00000000  000ce521  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  0000274c  00000000  00000000  000ce578  2**2
+ 20 .debug_frame  0000274c  00000000  00000000  000ce574  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -901,42 +901,42 @@ switch ( index ) {
  80007a6:	2104      	movs	r1, #4
  80007a8:	4867      	ldr	r0, [pc, #412]	; (8000948 <updateLEDMatrix+0x374>)
  80007aa:	f000 fe35 	bl	8001418 <HAL_GPIO_WritePin>
-    	    	HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, SET );
+    	HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, SET );
  80007ae:	2201      	movs	r2, #1
  80007b0:	2108      	movs	r1, #8
  80007b2:	4865      	ldr	r0, [pc, #404]	; (8000948 <updateLEDMatrix+0x374>)
  80007b4:	f000 fe30 	bl	8001418 <HAL_GPIO_WritePin>
-    	    	HAL_GPIO_WritePin(ENM2_GPIO_Port, ENM2_Pin, SET );
+    	HAL_GPIO_WritePin(ENM2_GPIO_Port, ENM2_Pin, SET );
  80007b8:	2201      	movs	r2, #1
  80007ba:	f44f 6180 	mov.w	r1, #1024	; 0x400
  80007be:	4862      	ldr	r0, [pc, #392]	; (8000948 <updateLEDMatrix+0x374>)
  80007c0:	f000 fe2a 	bl	8001418 <HAL_GPIO_WritePin>
-    	    	HAL_GPIO_WritePin(ENM3_GPIO_Port, ENM3_Pin, SET );
+    	HAL_GPIO_WritePin(ENM3_GPIO_Port, ENM3_Pin, SET );
  80007c4:	2201      	movs	r2, #1
  80007c6:	f44f 6100 	mov.w	r1, #2048	; 0x800
  80007ca:	485f      	ldr	r0, [pc, #380]	; (8000948 <updateLEDMatrix+0x374>)
  80007cc:	f000 fe24 	bl	8001418 <HAL_GPIO_WritePin>
-    	    	HAL_GPIO_WritePin(ENM4_GPIO_Port, ENM4_Pin, RESET );
+    	HAL_GPIO_WritePin(ENM4_GPIO_Port, ENM4_Pin, RESET );
  80007d0:	2200      	movs	r2, #0
  80007d2:	f44f 5180 	mov.w	r1, #4096	; 0x1000
  80007d6:	485c      	ldr	r0, [pc, #368]	; (8000948 <updateLEDMatrix+0x374>)
  80007d8:	f000 fe1e 	bl	8001418 <HAL_GPIO_WritePin>
-    	    	HAL_GPIO_WritePin(ENM5_GPIO_Port, ENM5_Pin, SET );
+    	HAL_GPIO_WritePin(ENM5_GPIO_Port, ENM5_Pin, SET );
  80007dc:	2201      	movs	r2, #1
  80007de:	f44f 5100 	mov.w	r1, #8192	; 0x2000
  80007e2:	4859      	ldr	r0, [pc, #356]	; (8000948 <updateLEDMatrix+0x374>)
  80007e4:	f000 fe18 	bl	8001418 <HAL_GPIO_WritePin>
-    	    	HAL_GPIO_WritePin(ENM6_GPIO_Port, ENM6_Pin, SET );
+    	HAL_GPIO_WritePin(ENM6_GPIO_Port, ENM6_Pin, SET );
  80007e8:	2201      	movs	r2, #1
  80007ea:	f44f 4180 	mov.w	r1, #16384	; 0x4000
  80007ee:	4856      	ldr	r0, [pc, #344]	; (8000948 <updateLEDMatrix+0x374>)
  80007f0:	f000 fe12 	bl	8001418 <HAL_GPIO_WritePin>
-    	    	HAL_GPIO_WritePin(ENM7_GPIO_Port, ENM7_Pin, SET );
+    	HAL_GPIO_WritePin(ENM7_GPIO_Port, ENM7_Pin, SET );
  80007f4:	2201      	movs	r2, #1
  80007f6:	f44f 4100 	mov.w	r1, #32768	; 0x8000
  80007fa:	4853      	ldr	r0, [pc, #332]	; (8000948 <updateLEDMatrix+0x374>)
  80007fc:	f000 fe0c 	bl	8001418 <HAL_GPIO_WritePin>
-    	    	SCAN_LED_MATRIX(status, index);
+    	SCAN_LED_MATRIX(status, index);
  8000800:	6839      	ldr	r1, [r7, #0]
  8000802:	6878      	ldr	r0, [r7, #4]
  8000804:	f7ff fe4a 	bl	800049c <SCAN_LED_MATRIX>
