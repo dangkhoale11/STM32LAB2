@@ -184,25 +184,25 @@ switch ( index ) {
     	SCAN_LED_MATRIX(index);
         break ;
     case 6:
-    	HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, SET );
-    	HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, SET );
-    	HAL_GPIO_WritePin(ENM2_GPIO_Port, ENM2_Pin, SET );
-    	HAL_GPIO_WritePin(ENM3_GPIO_Port, ENM3_Pin, SET );
-    	HAL_GPIO_WritePin(ENM4_GPIO_Port, ENM4_Pin, SET );
-    	HAL_GPIO_WritePin(ENM5_GPIO_Port, ENM5_Pin, SET );
-    	HAL_GPIO_WritePin(ENM6_GPIO_Port, ENM6_Pin, RESET );
-    	HAL_GPIO_WritePin(ENM7_GPIO_Port, ENM7_Pin, SET );
+    	HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM2_GPIO_Port, ENM2_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM3_GPIO_Port, ENM3_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM4_GPIO_Port, ENM4_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM5_GPIO_Port, ENM5_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM6_GPIO_Port, ENM6_Pin, GPIO_PIN_RESET );
+    	HAL_GPIO_WritePin(ENM7_GPIO_Port, ENM7_Pin, GPIO_PIN_SET );
     	SCAN_LED_MATRIX(index);
         break ;
     case 7:
-    	HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, SET );
-    	HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, SET );
-    	HAL_GPIO_WritePin(ENM2_GPIO_Port, ENM2_Pin, SET );
-    	HAL_GPIO_WritePin(ENM3_GPIO_Port, ENM3_Pin, SET );
-    	HAL_GPIO_WritePin(ENM4_GPIO_Port, ENM4_Pin, SET );
-    	HAL_GPIO_WritePin(ENM5_GPIO_Port, ENM5_Pin, SET );
-    	HAL_GPIO_WritePin(ENM6_GPIO_Port, ENM6_Pin, SET );
-    	HAL_GPIO_WritePin(ENM7_GPIO_Port, ENM7_Pin, RESET );
+    	HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM2_GPIO_Port, ENM2_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM3_GPIO_Port, ENM3_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM4_GPIO_Port, ENM4_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM5_GPIO_Port, ENM5_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM6_GPIO_Port, ENM6_Pin, GPIO_PIN_SET );
+    	HAL_GPIO_WritePin(ENM7_GPIO_Port, ENM7_Pin, GPIO_PIN_RESET );
     	SCAN_LED_MATRIX(index);
 
         break ;
@@ -252,7 +252,7 @@ int main(void)
   setTimer(0, 100);
   setTimer(1, 25);
   setTimer(2, 100);
-  setTimer(3,1);
+  setTimer(3,5);
   updateClockBuffer();
   while (1)
   {
@@ -272,7 +272,7 @@ int main(void)
 	  		  updateClockBuffer();
 	  	  }
 	  	  if(timer_flag[3] == 1){
-	  		  setTimer(3,1);
+	  		  setTimer(3,25);
 	  		  updateLEDMatrix(index_led_matrix++);
 	  		 if(index_led_matrix >= MAX_LED_MATRIX-1) index_led_matrix = 0;
 	  	  }
