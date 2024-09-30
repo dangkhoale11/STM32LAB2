@@ -2859,3 +2859,7 @@
 2024-09-30 12:58:51,780 [INFO] RetryExec:113 - Retrying request to {s}->https://sw-center.st.com:443
 2024-09-30 12:59:03,887 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://sw-center.st.com:443: The target server failed to respond
 2024-09-30 12:59:03,888 [INFO] RetryExec:113 - Retrying request to {s}->https://sw-center.st.com:443
+2024-09-30 13:01:12,179 [INFO] Activator:177 - 
+
+
+2024-09-30 13:01:12,180 [INFO] Activator:178 - !SESSION log4j initialized
