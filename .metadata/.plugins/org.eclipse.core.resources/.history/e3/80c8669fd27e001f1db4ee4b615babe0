@@ -108,7 +108,7 @@ void SCAN_LED_MATRIX(int status, int index){
 	  HAL_GPIO_WritePin(ROW6_GPIO_Port, ROW6_Pin, RESET);
 	  HAL_GPIO_WritePin(ROW7_GPIO_Port, ROW7_Pin, RESET);
 
-	  uint8_t row_value = matrix_buffer_new[status][index];
+	  uint8_t row_value = matrix_buffer[status][index];
 	  if(row_value & 0b00000001) HAL_GPIO_WritePin(ROW0_GPIO_Port, ROW0_Pin, SET );
 	  if(row_value & 0b00000010) HAL_GPIO_WritePin(ROW1_GPIO_Port, ROW1_Pin, SET );
 	  if(row_value & 0b00000100) HAL_GPIO_WritePin(ROW2_GPIO_Port, ROW2_Pin, SET );
@@ -276,7 +276,7 @@ int main(void)
 	  	  }
 	  	  if(timer_flag[3] == 1){
 	  		  setTimer(3,25);
-	  		  updateLEDMatrix(status, index_led_matrix++);
+	  		  updateLEDMatrix(stastus,index_led_matrix);
 	  		 if(index_led_matrix >= MAX_LED_MATRIX-1){
 	  			index_led_matrix = 0;
 	  			status++;
