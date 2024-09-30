@@ -255,7 +255,7 @@ int main(void)
   setTimer(0, 100);
   setTimer(1, 25);
   setTimer(2, 100);
-  setTimer(3,5);
+  setTimer(3,1);
   updateClockBuffer();
   while (1)
   {
@@ -276,7 +276,7 @@ int main(void)
 
 	  	  }
 	  	  if(timer_flag[3] == 1){
-	  		  setTimer(3,5);
+	  		  setTimer(3,1);
 	  		  updateLEDMatrix(status, index_led_matrix++);
 	  		 if(index_led_matrix >= MAX_LED_MATRIX-1){
 	  			index_led_matrix = 0;

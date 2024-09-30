@@ -1216,14 +1216,15 @@ int main(void)
  80009e8:	f000 f928 	bl	8000c3c <setTimer>
 	  		  updateClockBuffer();
  80009ec:	f7ff fcf0 	bl	80003d0 <updateClockBuffer>
+
 	  	  }
 	  	  if(timer_flag[3] == 1){
  80009f0:	4b15      	ldr	r3, [pc, #84]	; (8000a48 <main+0xfc>)
  80009f2:	68db      	ldr	r3, [r3, #12]
  80009f4:	2b01      	cmp	r3, #1
  80009f6:	d1c8      	bne.n	800098a <main+0x3e>
-	  		  setTimer(3,25);
- 80009f8:	2119      	movs	r1, #25
+	  		  setTimer(3,5);
+ 80009f8:	2105      	movs	r1, #5
  80009fa:	2003      	movs	r0, #3
  80009fc:	f000 f91e 	bl	8000c3c <setTimer>
 	  		  updateLEDMatrix(status, index_led_matrix++);
